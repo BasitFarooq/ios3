@@ -65,7 +65,7 @@
                 $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/createarticle.asmx/GetDropDownListSportCategory",
+    url: "http://2bvision.com/Kids2proSports/createarticle.asmx/GetDropDownListSportCategory",
     data: "{}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -102,7 +102,7 @@
                     $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/createarticle.asmx/SqlDataSourceSportsFromCategory",
+    url: "http://2bvision.com/Kids2proSports/createarticle.asmx/SqlDataSourceSportsFromCategory",
     data: "{MajorSport:'" + MajorSport + "'}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -140,7 +140,7 @@
 {
 
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/createarticle.asmx/SqlDataSourceSportFromCategoryWithGender",
+    url: "http://2bvision.com/Kids2proSports/createarticle.asmx/SqlDataSourceSportFromCategoryWithGender",
 
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
@@ -178,7 +178,7 @@
 {
 
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/createarticle.asmx/GetDropDownListSportName",
+    url: "http://2bvision.com/Kids2proSports/createarticle.asmx/GetDropDownListSportName",
 
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
@@ -320,7 +320,7 @@
                 $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/DataAccessService.asmx/CreateArticle",
+    url: "http://2bvision.com/Kids2proSports/DataAccessService.asmx/CreateArticle",
     data: "{article:" + JSON.stringify(article) + "}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",

@@ -84,7 +84,7 @@
 {//"+getUrlVars()["me"] +"
 
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/ViewArticle.asmx/GetArticleTitle",
+    url: "http://2bvision.com/Kids2proSports/ViewArticle.asmx/GetArticleTitle",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -112,7 +112,7 @@
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/ViewArticle.asmx/GetArticleText",
+    url: "http://2bvision.com/Kids2proSports/ViewArticle.asmx/GetArticleText",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -136,7 +136,7 @@
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/ViewArticle.asmx/GetRelatedArticel",
+    url: "http://2bvision.com/Kids2proSports/ViewArticle.asmx/GetRelatedArticel",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -181,7 +181,7 @@
             queryString = queryString.replace("%20", " ");
             var dataBlog = { "articleId": queryString };
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/ViewArticle.asmx/GetArticleBlog',
+                url: 'http://2bvision.com/Kids2proSports/ViewArticle.asmx/GetArticleBlog',
                 type: 'POST',
                 data: JSON.stringify(dataBlog),
                 contentType: "application/json; charset=utf-8",
@@ -201,7 +201,7 @@
             queryString = queryString.replace("%20", " ");
             var dataBlog = { "articleId": queryString };
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/ProfileBuilderService.asmx/GetArticleVideos',
+                url: 'http://2bvision.com/Kids2proSports/ProfileBuilderService.asmx/GetArticleVideos',
                 type: 'POST',
                 data: JSON.stringify(dataBlog),
                 contentType: "application/json; charset=utf-8",

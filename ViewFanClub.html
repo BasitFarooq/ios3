@@ -79,7 +79,7 @@
 {//"+getUrlVars()["me"] +"
 
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/FanClubBuilderService.asmx/GetFanClubInfo",
+    url: "http://2bvision.com/Kids2proSports/FanClubBuilderService.asmx/GetFanClubInfo",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -108,7 +108,7 @@
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/FanClubBuilderService.asmx/GetFanClubImage",
+    url: "http://2bvision.com/Kids2proSports/FanClubBuilderService.asmx/GetFanClubImage",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -133,7 +133,7 @@
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/FanClubBuilderService.asmx/GetFanClubLinks",
+    url: "http://2bvision.com/Kids2proSports/FanClubBuilderService.asmx/GetFanClubLinks",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -156,7 +156,7 @@
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/ProfileBuilderService.asmx/GetSocialMeta",
+    url: "http://2bvision.com/Kids2proSports/ProfileBuilderService.asmx/GetSocialMeta",
     data: "{userName: '" + $.Storage.get("UserName") + "','viewingUser':'" + $.Storage.get("UserName") + "'}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -202,7 +202,7 @@
             var dataBlog = { "ID": queryString };
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/FanClubBuilderService.asmx/GetClubBlog',
+                url: 'http://2bvision.com/Kids2proSports/FanClubBuilderService.asmx/GetClubBlog',
                 type: 'POST',
                 data: JSON.stringify(dataBlog),
                 contentType: "application/json; charset=utf-8",

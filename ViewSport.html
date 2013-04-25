@@ -87,7 +87,7 @@ function renderTable(result) {
 
             var dataBlog = { "SportName": queryString };
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/ViewSport.asmx/GetKeywordArticles',
+                url: 'http://2bvision.com/Kids2proSports/ViewSport.asmx/GetKeywordArticles',
                 type: 'POST',
                 data: JSON.stringify(dataBlog),
                 contentType: "application/json; charset=utf-8",
@@ -122,7 +122,7 @@ function renderTable(result) {
         $.ajax(
 			{
 			    type: "POST",
-			    url: "http://2bvision.com/kids2promobile/ViewSport.asmx/GetSubSportsInSports",
+			    url: "http://2bvision.com/Kids2proSports/ViewSport.asmx/GetSubSportsInSports",
 			    data: JSON.stringify(data),
 			    contentType: "application/json; charset=utf-8",
 			    dataType: "json",

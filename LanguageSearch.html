@@ -143,7 +143,7 @@
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/CascadingCitySelection.asmx/GetDropDownListCountry",
+    url: "http://2bvision.com/Kids2proSports/CascadingCitySelection.asmx/GetDropDownListCountry",
     data: "{}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -174,7 +174,7 @@
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/CascadingCitySelection.asmx/GetDropDownListUsStates",
+    url: "http://2bvision.com/Kids2proSports/CascadingCitySelection.asmx/GetDropDownListUsStates",
     data: "{}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -203,7 +203,7 @@
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/SearchService.asmx/GetLanguages",
+    url: "http://2bvision.com/Kids2proSports/SearchService.asmx/GetLanguages",
     data: "{}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -245,7 +245,7 @@
 {
 
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/CascadingCitySelection.asmx/GetDropDownListCity",
+    url: "http://2bvision.com/Kids2proSports/CascadingCitySelection.asmx/GetDropDownListCity",
     data: "{county:'" + county + "','state':'" + state + "'}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -276,7 +276,7 @@
 {
 
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/CascadingCitySelection.asmx/GetDropDownListCounty",
+    url: "http://2bvision.com/Kids2proSports/CascadingCitySelection.asmx/GetDropDownListCounty",
     data: "{state:'" + state + "'}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -402,7 +402,7 @@
             ParamData = { "Country": Country, "State": State, "County": County, "City": City, "PLanguage": PLanguage, "SLanguage": SLanguage, "RLanguage": RLanguage, "Prefix": Prefix, "Gender": Gender };
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SearchService.asmx/GetUserByLanguage',
+                url: 'http://2bvision.com/Kids2proSports/SearchService.asmx/GetUserByLanguage',
                 type: 'POST',
                 data: JSON.stringify(ParamData),
                 contentType: "application/json; charset=utf-8",

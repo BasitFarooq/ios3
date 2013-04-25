@@ -89,7 +89,7 @@
 		  var querystring= getUrlVars()["Id"];querystring= querystring.replace("%20", " ");
 	     Paramdata={"teamId":querystring,"status":"confirmed"}
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/TeamBuilder.asmx/UsersOnTeamsWithProfile',
+                url: 'http://2bvision.com/Kids2proSports/TeamBuilder.asmx/UsersOnTeamsWithProfile',
                 type: 'POST',
                 data: JSON.stringify(Paramdata),
                 contentType: "application/json; charset=utf-8",
@@ -114,7 +114,7 @@
 		$.ajax(
 		{
 		type: "POST",
-		url: "http://2bvision.com/kids2promobile/TeamBuilder.asmx/GetBestFitTeamName",
+		url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetBestFitTeamName",
 		data:JSON.stringify(Paramdata),
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
@@ -138,7 +138,7 @@
 		$.ajax(
 		{
 		type: "POST",
-		url: "http://2bvision.com/kids2promobile/TeamBuilder.asmx/GetTeamImage",
+		url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetTeamImage",
 		data:JSON.stringify(Paramdata),
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
@@ -162,7 +162,7 @@ function GetLeftColumn() {
 		$.ajax(
 		{
 		type: "POST",
-		url: "http://2bvision.com/kids2promobile/TeamBuilder.asmx/GetLeftColumn",
+		url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetLeftColumn",
 		data:JSON.stringify(Paramdata),
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
@@ -185,7 +185,7 @@ function RenderNextEvent() {
 		$.ajax(
 		{
 		type: "POST",
-		url: "http://2bvision.com/kids2promobile/TeamBuilder.asmx/RenderNextEvent",
+		url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/RenderNextEvent",
 		data:JSON.stringify(Paramdata),
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
@@ -208,7 +208,7 @@ function RenderNextEvent() {
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/AdvertisementManagerService.asmx/GetRightAdvertisingColumn",
+    url: "http://2bvision.com/Kids2proSports/AdvertisementManagerService.asmx/GetRightAdvertisingColumn",
     data: "{}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -234,7 +234,7 @@ function RenderNextEvent() {
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/AdvertisementManagerService.asmx/GetLeaderBoard",
+    url: "http://2bvision.com/Kids2proSports/AdvertisementManagerService.asmx/GetLeaderBoard",
     data: "{}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -259,7 +259,7 @@ function RenderNextEvent() {
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/TeamBuilder.asmx/GetTeamInfo",
+    url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetTeamInfo",
     data: JSON.stringify(Paramdata),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -282,7 +282,7 @@ function RenderNextEvent() {
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/TeamBuilder.asmx/GetTeamInfo",
+    url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetTeamInfo",
     data: JSON.stringify(Paramdata),
     contentType: "application/json; charset=utf-8",
     dataType: "json",

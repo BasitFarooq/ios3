@@ -81,7 +81,7 @@
 		{
 
 		    type: "POST",
-		    url: "http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/GetHomePageHeading",
+		    url: "http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/GetHomePageHeading",
 		    data: JSON.stringify(data),
 		    contentType: "application/json; charset=utf-8",
 		    dataType: "json",
@@ -110,7 +110,7 @@
             var data = { "userName": $.Storage.get("UserName"), "sport": queryString };
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/IsUserAFollower',
+                url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/IsUserAFollower',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: "application/json; charset=utf-8",
@@ -147,7 +147,7 @@
             var data = { "_sportName": queryString };
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/HandleSportCountIncrementing',
+                url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/HandleSportCountIncrementing',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: "application/json; charset=utf-8",
@@ -168,7 +168,7 @@
             var data = { "sportName": queryString };
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/GetNumberOfSportImpressions',
+                url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/GetNumberOfSportImpressions',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: "application/json; charset=utf-8",
@@ -191,7 +191,7 @@
             var data = { "sportName": queryString };
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/GetSportHierarchy',
+                url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/GetSportHierarchy',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: "application/json; charset=utf-8",
@@ -211,7 +211,7 @@
             var data = { "sportName": queryString };
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/GetSportDefinition',
+                url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/GetSportDefinition',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: "application/json; charset=utf-8",
@@ -232,7 +232,7 @@
         function GetMediumRectangle() {
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/AdvertisementManagerService.asmx/GetMediumRectangle',
+                url: 'http://2bvision.com/Kids2proSports/AdvertisementManagerService.asmx/GetMediumRectangle',
                 type: 'POST',
                 data: {},
                 contentType: "application/json; charset=utf-8",
@@ -251,7 +251,7 @@
             queryString = getUrlVars()["SportName"];queryString = queryString.replace("%20", " ");
             var data = { "_sportName": queryString };
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/GetRecentVideoUrl',
+                url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/GetRecentVideoUrl',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: "application/json; charset=utf-8",
@@ -277,7 +277,7 @@
 	  $.ajax(
 	  {
 	  type: "POST",
-	  url: "http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/GetRecentBlogsForPhilanthropyAndDisabledSports",
+	  url: "http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/GetRecentBlogsForPhilanthropyAndDisabledSports",
 	  data: JSON.stringify(data),
 	  contentType: "application/json; charset=utf-8",
 	  dataType: "json",
@@ -317,7 +317,7 @@
 	  $.ajax(
 	  {
 	  type: "POST",
-	  url: "http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/GetRecentBlogs",
+	  url: "http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/GetRecentBlogs",
 	  data: JSON.stringify(parameters),
 	  contentType: "application/json; charset=utf-8",
 	  dataType: "json",
@@ -343,7 +343,7 @@
             var data = { "userName": $.Storage.get("UserName"), "_sportName": queryString };
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/HandleUserUnFollow',
+                url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/HandleUserUnFollow',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: "application/json; charset=utf-8",
@@ -367,7 +367,7 @@
             queryString = getUrlVars()["SportName"];queryString = queryString.replace("%20", " ");
             var data = { "currentPage": "Blogs", "_sportName": queryString };
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/EncodeSubNav',
+                url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/EncodeSubNav',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: "application/json; charset=utf-8",
@@ -392,7 +392,7 @@
               var data = { "userName": $.Storage.get("UserName"), "_sportName": queryString };
 
               $.ajax({
-                  url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/HandleUserFollowing',
+                  url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/HandleUserFollowing',
                   type: 'POST',
                   data: JSON.stringify(data),
                   contentType: "application/json; charset=utf-8",
@@ -423,7 +423,7 @@
             var Param = { "userName": $.Storage.get("UserName"), "blogText": $('#TextBoxBlogEntry').val(),"category":$('#DropDownListBlogType').val(),"_sportName":queryString};
 
             $.ajax({
-                url: 'http://2bvision.com/kids2promobile/SporthomePageBuilder.asmx/CreateBlogEntry',
+                url: 'http://2bvision.com/Kids2proSports/SporthomePageBuilder.asmx/CreateBlogEntry',
                 type: 'POST',
                 data: JSON.stringify(Param),
                 contentType: "application/json; charset=utf-8",

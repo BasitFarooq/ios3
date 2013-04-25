@@ -100,7 +100,7 @@
                 ParamData = { "Name": Name, "Sport": Sport, "Category": Category, "Gender": Gender };
 
                 $.ajax({
-                    url: 'http://2bvision.com/kids2promobile/TeamSearch.asmx/GetSearchTeam',
+                    url: 'http://2bvision.com/Kids2proSports/TeamSearch.asmx/GetSearchTeam',
                     type: 'POST',
                     data: JSON.stringify(ParamData),
                     contentType: "application/json; charset=utf-8",
@@ -160,7 +160,7 @@
             $.ajax(
 {
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/createarticle.asmx/GetDropDownListSportCategory",
+    url: "http://2bvision.com/Kids2proSports/createarticle.asmx/GetDropDownListSportCategory",
     data: "{}",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
@@ -198,7 +198,7 @@
                 $.ajax(
 	{
 	    type: "POST",
-	    url: "http://2bvision.com/kids2promobile/SearchService.asmx/GetMinorSports",
+	    url: "http://2bvision.com/Kids2proSports/SearchService.asmx/GetMinorSports",
 	    data: JSON.stringify(data),
 	    contentType: "application/json; charset=utf-8",
 	    dataType: "json",
@@ -237,7 +237,7 @@
 {
 
     type: "POST",
-    url: "http://2bvision.com/kids2promobile/createarticle.asmx/SqlDataSourceSportFromCategoryWithGender",
+    url: "http://2bvision.com/Kids2proSports/createarticle.asmx/SqlDataSourceSportFromCategoryWithGender",
 
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
