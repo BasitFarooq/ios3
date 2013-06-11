@@ -4,7 +4,7 @@
     id        = "com.kids2prosports.k2ps"
     versionCode="12"
     version   = "1.0.0">
-
+  <preference name="phonegap-version" value="2.7.0" />
   <!-- versionCode is optional and Android only -->
 
   <name>Kids2ProSports</name>
