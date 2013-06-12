@@ -31,9 +31,9 @@
   <!-- iphone -->
   <gap:splash src="splash.png" />
   <gap:splash src="splash/ios/Default.png" width="320" height="480" />
-  <gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
+  <gap:splash src="splash/ios/Default@2x.png" width="640" height="960" />
   <gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
-  <gap:splash src="splash/ios/Default_iphone5.png" width="640" height="1136" />
+  <gap:splash src="splash/ios/Default-568h.png" width="640" height="1136" />
   <gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
   <gap:splash src="splash/ios/Default-Landscape_at_2x.png" width="2048" height="1496" />
   <gap:splash src="splash/ios/Default-Portrait_at_2x.png" width="1536" height="2008" />
