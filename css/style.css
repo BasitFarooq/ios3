@@ -122,6 +122,7 @@ em {
 }
 .fLeft {
     float: left;
+    font-size: 14px;
 }
 .fRight {
     float: right;
@@ -335,8 +336,8 @@ nav li:hover { background:#6f0505; height:53px;}
 .userLinks ul {
 	text-decoration:none; font-weight:bold;			
 }
-.userLinks ul img { display:none; }
-.userLinks ul li:first-Child { margin:5px 0 0 0;} 
+
+/*.userLinks ul li:first-Child { margin:5px 0 0 0;}*/ 
 .userLinks ul li {
     display: block;
     height:20px;
@@ -355,7 +356,7 @@ nav li:hover { background:#6f0505; height:53px;}
 .userLinks li img {
     border: medium none;
     height: 20px;
-    margin: 0 10px 0 0;
+    margin: 0 10px -6px 0;
     padding: 0;
     width: 20px;
 }
@@ -441,7 +442,7 @@ input[type="submit"], input[type="button"], .btn {border:1px solid #00531b; colo
 	
 }
 
-.contentLeft { width:85%;}
+.contentLeft { width:100%;}
 .contentRight { width:13%; background:#800000; border:1px solid #000000; }
 .contentRight  a img {display:block;}
 
@@ -534,6 +535,7 @@ p.affiiliate img { float:left; margin:0 5px 5px 0; width:110px;}
 	.toggler { width: 100%; height: auto; position:absolute; top:0; left:0; }
     #button { padding: .5em 1em; font-size:0; display:inline-block; text-decoration: none; position:absolute; top:10px; background:url(../images/menuImg.png) no-repeat left top; width:30px; height:30px; left:1%; z-index:999999; }
     #effect { position: absolute; padding: 0.4em; background:#333; width:85%;z-index:9999; top:57px; }
+
 ul#nav { margin:0; padding:0; list-style-type: none; width:97%; padding:0 5px; }
 ul#nav li { margin:0 0 10px 0; padding:0; line-height: 20px;}
 ul#nav li a, nav li a:visited { margin:0; padding:0; display: block; color: #999; background: #111111; text-decoration: none; padding: 9px 15px;
@@ -592,4 +594,118 @@ color: #336699;
 .lablemyaccount
 {
     margin-left:15%;
+}
+
+.newmenubar
+{
+
+font-size: 12px;
+padding-top: 18px;
+width: 220px;
+height: 20px;
+float: right;
+}
+.newmenubar a
+{
+color: #fff;
+}
+
+#messageimage { padding: .5em 1em; font-size:0; display:inline-block; text-decoration: none; position:absolute; top:10px; background:url(../images/message-Icon.png) no-repeat left top; width:30px; height:30px; left:70%; z-index:999999; }
+#myaccountimage { padding: .5em 1em; font-size:0; display:inline-block; text-decoration: none; position:absolute; top:10px; background:url(../images/myaccount-icon.png) no-repeat left top; width:30px; height:30px; left:80%; z-index:999999; }
+.newmenucolor
+{
+    color: #fff;
+    margin-left:25px;
+}
+
+.newmenucolor a
+{
+    color: #fff;
+    text-decoration:none;
+}
+
+.spanstyle span
+{
+    color: #800000;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+}
+.spanstyle h3
+{
+    font-size:16px;
+    color:black;
+    font-family:Arial;
+    font-weight: bold;
+    
+}
+.spanstyle p
+{
+    border:1px solid #cccccc;
+    padding:2px;
+}
+
+.list-user-profile img
+{
+        border: 3px solid;
+        border-color:#D6D9D9;
+        box-shadow:0 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 0 0 0 3px #FEFEFE, 0 5px 3px 3px #D2D2D2;
+}
+.list-user-profile li
+{
+    background: #F9F9F9;
+    width: 98%;
+    color: #000000;
+    display: block;
+    font-size: 11px;
+    padding: 1%;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #D6D9D9;
+}
+.list-user-profile li:hover
+{
+    background: #efeded;
+    width: 98%;
+    color: #000000;
+    display: block;
+    font-size: 11px;
+    padding: 1%;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #D6D9D9;
+}
+
+.tablemessage thead
+{
+background-color:#800000;
+color:#fff;
+padding:5px;
+border:1px solid #ccc;
+
+}
+.tablemessage tr, th
+{
+
+padding:5px;
+border:1px solid #ccc;
+
+}
+
+.viewmessagepage h3
+{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.viewmessagepage p
+{
+    font-size: 14px;
+}
+
+.viewmessagepage a  {background-color: #ccc; font-weight: bold; }
+
+.viewmessagepage span
+{
+    margin:0 5px 0 5px;
 }
