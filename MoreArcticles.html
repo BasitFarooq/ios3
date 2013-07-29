@@ -166,7 +166,55 @@
 
         });
 
+        function GetRightAdver() {
 
+            $.ajax(
+{
+    type: "POST",
+    url: "http://2bvision.com/kids2promobile/AdvertisementManagerService.asmx/GetRightAdvertisingColumn",
+    data: "{}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+    success: function (response, status) {
+
+        $.Storage.get("UserName");
+        var asd = $("#divRightAdds");
+        $("#divRightAdds").html(response.d);
+
+    },
+    failure: function (msg) {
+        alert(msg);
+    }
+}
+	);
+        }
+
+
+        function GetLeaderBoard() {
+
+            $.ajax(
+{
+    type: "POST",
+    url: "http://2bvision.com/kids2promobile/AdvertisementManagerService.asmx/GetLeaderBoard",
+    data: "{}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+    success: function (response, status) {
+
+        $.Storage.get("UserName");
+        var asd = $("#divLeaderBoard");
+        $("#divLeaderBoard").html(response.d);
+
+
+    },
+    failure: function (msg) {
+        alert(msg);
+    }
+}
+	);
+        }
     </script>
 </head>
 <body>
@@ -198,6 +246,8 @@
         </header>
             <!-- header ends -->
     <!-- container starts-->
+         <div id="divLeaderBoard">
+        </div>
     <div class="contetns clearfix">
         <!-- left area starts-->
         <div class="contentLeft fLeft">
@@ -229,11 +279,11 @@
             <div id="errorMessage">
             </div>
             <br />
-            <br />
-            <br />
-            <br />
+           
         </div>
         <!-- left area ends-->
+        <div id="divRightAdds" class="contentRight fRight">
+            </div>
     </div>
     </div>
 </body>

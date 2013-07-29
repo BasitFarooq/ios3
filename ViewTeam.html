@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    
+
     <title></title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/skeleton.css" rel="stylesheet" type="text/css" />
@@ -32,7 +32,7 @@
                 if (selectedEffect === "scale") {
                     options = { percent: 0 };
                 } else if (selectedEffect === "size") {
-                    options = { to: { width: 200, height: 60} };
+                    options = { to: { width: 200, height: 60 } };
                 }
 
                 // run the effect
@@ -57,166 +57,166 @@
                 return false;
             }
         });
-   /// Parse Querystring ///
-   
-  function getUrlVars() {
-                var vars = [], hash;
-                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-                for (var i = 0; i < hashes.length; i++) {
-                    hash = hashes[i].split('=');
-                    vars.push(hash[0]);
-                    vars[hash[0]] = hash[1];
-                }
-                return vars;
-           	
-			}
-			
-		  function renderTable(result) {
-                var dtData = [];
-                $.each(result, function () {
-                    dtData.push([
-						   this.Picture,
-                           this.FirstName,
-						   this.LastName,                           
-						   this.City,
-						   this.State,
-						   this.Country,
-						   "<a href=UserProfile.html?Id="+this.UserName+">View Users Profile</a>"
-						
-                         		  
-						   
-                        ]);
-                });
+        /// Parse Querystring ///
 
-                $('#UserGrid').dataTable({ //UserGrid is the id of the table
-                    'aaData': dtData,                   
-
-                });
-               
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
             }
-		///UsersOnTeamsWithProfile ///
-		  var querystring= getUrlVars()["Id"];
-          querystring=querystring.replace("%20"," ");
-	     Paramdata={"teamId":querystring,"status":"Confirmed"}
-            $.ajax({
-                url: 'http://2bvision.com/Kids2proSports/TeamBuilder.asmx/UsersOnTeamsWithProfile',
-                type: 'POST',
+            return vars;
+
+        }
+
+        function renderTable(result) {
+            var dtData = [];
+            $.each(result, function () {
+                dtData.push([
+                       this.Picture,
+                       this.FirstName,
+                       this.LastName,
+                       this.City,
+                       this.State,
+                       this.Country,
+                       "<a href=UserProfile.html?Id=" + this.UserName + ">View Users Profile</a>"
+
+
+
+                ]);
+            });
+
+            $('#UserGrid').dataTable({ //UserGrid is the id of the table
+                'aaData': dtData,
+
+            });
+
+        }
+        ///UsersOnTeamsWithProfile ///
+        var querystring = getUrlVars()["Id"];
+        querystring = querystring.replace("%20", " ");
+        Paramdata = { "teamId": querystring, "status": "Confirmed" }
+        $.ajax({
+            url: 'http://2bvision.com/Kids2proSports/TeamBuilder.asmx/UsersOnTeamsWithProfile',
+            type: 'POST',
+            data: JSON.stringify(Paramdata),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+
+                renderTable(response.d);
+            },
+            failure: function (errMsg) {
+                $('#errorMessage').text(errMsg); //errorMessage is id of the div
+            }
+        });
+
+
+
+        ///GetBestFitTeamName ///
+
+        function GetBestFitTeamName() {
+            var querystring = getUrlVars()["Id"];
+            querystring = querystring.replace("%20", " ");
+            Paramdata = { "teamId": querystring }
+
+            $.ajax(
+            {
+                type: "POST",
+                url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetBestFitTeamName",
                 data: JSON.stringify(Paramdata),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                success: function (response) {
-                   
-                    renderTable(response.d);
-                },
-                failure: function (errMsg) {
-                    $('#errorMessage').text(errMsg); //errorMessage is id of the div
-                }
-            });
-	
-			
-			
-  ///GetBestFitTeamName ///
-		
-  function GetBestFitTeamName() {
-	    var querystring= getUrlVars()["Id"];
-         querystring=querystring.replace("%20"," ");
-	    Paramdata={"teamId":querystring}
-		
-		$.ajax(
-		{
-		type: "POST",
-		url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetBestFitTeamName",
-		data:JSON.stringify(Paramdata),
-		contentType: "application/json; charset=utf-8",
-		dataType: "json",
-		
-		success: function (response, status) {	  
-		//
-		$("#LabelTeamName").text(response.d);
-		},
-		failure: function (msg) {
-		alert(msg);
-		}
-	}
-	);
-}	
-  ///GetTeamImage() ///
 
-  function GetTeamImage() {
-	    var querystring= getUrlVars()["Id"];
-         querystring=querystring.replace("%20"," ");
-	    Paramdata={"teamId":querystring}
-		
-		$.ajax(
-		{
-		type: "POST",
-		url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetTeamImage",
-		data:JSON.stringify(Paramdata),
-		contentType: "application/json; charset=utf-8",
-		dataType: "json",
-		
-		success: function (response, status) {	 
-		// 
-		$("#teamImage").html(response.d);
-		},
-		failure: function (msg) {
-		alert(msg);
-		}
-	}
-	);
-}	
-  ///GetLeftColumn() ///
-  
-function GetLeftColumn() {
-	    var querystring= getUrlVars()["Id"];
-        querystring=querystring.replace("%20"," ");
-	    Paramdata={"teamId":querystring}
-		
-		$.ajax(
-		{
-		type: "POST",
-		url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetLeftColumn",
-		data:JSON.stringify(Paramdata),
-		contentType: "application/json; charset=utf-8",
-		dataType: "json",
-		
-		success: function (response, status) {	  
-		$("#DivlLeftColumn").html(response.d);
-		},
-		failure: function (msg) {
-		alert(msg);
-		}
-	}
-	);
-}	
- ///RenderNextEvent() ///
-  
-function RenderNextEvent() {
-	    var querystring= getUrlVars()["Id"];
-         querystring=querystring.replace("%20"," ");
-	    Paramdata={"teamId":querystring}
-		
-		$.ajax(
-		{
-		type: "POST",
-		url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/RenderNextEvent",
-		data:JSON.stringify(Paramdata),
-		contentType: "application/json; charset=utf-8",
-		dataType: "json",
-		
-		success: function (response, status) {	  
-		$("#LiteralNextEvent").html(response.d);
-		},
-		failure: function (msg) {
-		alert(msg);
-		}
-	}
-	);
-}	
+                success: function (response, status) {
+                    //
+                    $("#LabelTeamName").text(response.d);
+                },
+                failure: function (msg) {
+                    alert(msg);
+                }
+            }
+        );
+        }
+        ///GetTeamImage() ///
+
+        function GetTeamImage() {
+            var querystring = getUrlVars()["Id"];
+            querystring = querystring.replace("%20", " ");
+            Paramdata = { "teamId": querystring }
+
+            $.ajax(
+            {
+                type: "POST",
+                url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetTeamImage",
+                data: JSON.stringify(Paramdata),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+
+                success: function (response, status) {
+                    // 
+                    $("#teamImage").html(response.d);
+                },
+                failure: function (msg) {
+                    alert(msg);
+                }
+            }
+        );
+        }
+        ///GetLeftColumn() ///
+
+        function GetLeftColumn() {
+            var querystring = getUrlVars()["Id"];
+            querystring = querystring.replace("%20", " ");
+            Paramdata = { "teamId": querystring }
+
+            $.ajax(
+            {
+                type: "POST",
+                url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/GetLeftColumn",
+                data: JSON.stringify(Paramdata),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+
+                success: function (response, status) {
+                    $("#DivlLeftColumn").html(response.d);
+                },
+                failure: function (msg) {
+                    alert(msg);
+                }
+            }
+        );
+        }
+        ///RenderNextEvent() ///
+
+        function RenderNextEvent() {
+            var querystring = getUrlVars()["Id"];
+            querystring = querystring.replace("%20", " ");
+            Paramdata = { "teamId": querystring }
+
+            $.ajax(
+            {
+                type: "POST",
+                url: "http://2bvision.com/Kids2proSports/TeamBuilder.asmx/RenderNextEvent",
+                data: JSON.stringify(Paramdata),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+
+                success: function (response, status) {
+                    $("#LiteralNextEvent").html(response.d);
+                },
+                failure: function (msg) {
+                    alert(msg);
+                }
+            }
+        );
+        }
 
     </script>
-    
-    
+
+
     <script type="text/javascript">
         function GetTeamInfo() {
             var querystring = getUrlVars()["Id"];
@@ -265,17 +265,67 @@ function RenderNextEvent() {
 }
 	);
         }
+        function GetRightAdver() {
+
+            $.ajax(
+{
+    type: "POST",
+    url: "http://2bvision.com/Kids2proSports/AdvertisementManagerService.asmx/GetRightAdvertisingColumn",
+    data: "{}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+    success: function (response, status) {
+        //alert('1');
+        $.Storage.get("UserName");
+        var asd = $("#divRightAdds");
+        $("#divRightAdds").html(response.d);
+
+
+    },
+    failure: function (msg) {
+        alert(msg);
+    }
+}
+	);
+        }
+
+        function GetLeaderBoard() {
+
+            $.ajax(
+{
+    type: "POST",
+    url: "http://2bvision.com/Kids2proSports/AdvertisementManagerService.asmx/GetLeaderBoard",
+    data: "{}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+    success: function (response, status) {
+        //alert('1');
+        $.Storage.get("UserName");
+        var asd = $("#divLeaderBoard");
+        //alert(asd);
+
+        $("#divLeaderBoard").html(response.d);
+
+
+    },
+    failure: function (msg) {
+        alert(msg);
+    }
+});
+        }
 
 
     </script>
 </head>
 <body onload="GetBestFitTeamName(),GetTeamImage(),GetTeamInfo(),RenderNextEvent(),">
-     <div id="wraper">
+    <div id="wraper">
         <header style="overflow: hidden;">
-           <div style="background: #800000; height: 57px;">
+            <div style="background: #800000; height: 57px;">
                 <div class="newmenubar">
                     <a class="newmenucolor" id="myaccountimage" href="MyAccount.html" title="My Account" target="_self"></a>
-                    <a class="newmenucolor" id="messageimage"  href="Messages.html" title="Messages" target="_self"></a>
+                    <a class="newmenucolor" id="messageimage" href="Messages.html" title="Messages" target="_self"></a>
                 </div>
             </div>
             <select name="effects" id="effectTypes" style="display: none;">
@@ -296,14 +346,17 @@ function RenderNextEvent() {
                 </div>
             </div>
         </header>
-       
+
         <!-- header ends -->
         <!-- container starts-->
-        
+         <div id="divLeaderBoard">
+        </div>
         <br />
         <div class="contetns clearfix">
             <!-- left area starts-->
             <div class="contentLeft fLeft">
+                <div id="divRightAdds" class="contentRight fRight">
+                </div>
                 <div id="userProfile">
                     <h2>
                         <label id="LabelTeamName">
@@ -312,8 +365,7 @@ function RenderNextEvent() {
                     <div id="teamImage" class="teamImage">
                     </div>
                     <div>
-                        <h2>
-                            Next Scheduled Event</h2>
+                        <h2>Next Scheduled Event</h2>
                         <div id="LiteralNextEvent">
                         </div>
                     </div>
@@ -325,22 +377,16 @@ function RenderNextEvent() {
                         <table id="UserGrid" class="dataTables_filter">
                             <thead>
                                 <tr>
-                                    <th>
-                                        Picture
+                                    <th>Picture
                                     </th>
                                     <th>
-                                        <th>
-                                        </th>
+                                        <th></th>
                                     </th>
-                                    <th>
-                                        Location:
-                                        <th>
-                                        </th>
-                                        <th>
-                                        </th>
+                                    <th>Location:
+                                        <th></th>
+                                        <th></th>
                                     </th>
-                                    <th>
-                                    </th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -355,20 +401,20 @@ function RenderNextEvent() {
                     <br />
                 </div>
                 <br />
-                
-                
+
+
                 <br />
                 <div>
                     <label style="font-family: Arial, Helvetica, sans-serif; font-size: 12px" id="lblNoOfFollewrs" />
                 </div>
                 <br />
             </div>
-           
+
         </div>
         <!-- container ends-->
         <!-- footer starts -->
-        
+
         <!-- footer ends -->
-  </div>
+    </div>
 </body>
 </html>

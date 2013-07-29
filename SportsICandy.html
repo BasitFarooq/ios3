@@ -32,6 +32,55 @@
                 return false;
             });
         });
+        function GetRightAdver() {
+
+            $.ajax(
+{
+    type: "POST",
+    url: "http://2bvision.com/kids2promobile/AdvertisementManagerService.asmx/GetRightAdvertisingColumn",
+    data: "{}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+    success: function (response, status) {
+
+        $.Storage.get("UserName");
+        var asd = $("#divRightAdds");
+        $("#divRightAdds").html(response.d);
+
+    },
+    failure: function (msg) {
+        alert(msg);
+    }
+}
+	);
+        }
+
+
+        function GetLeaderBoard() {
+
+            $.ajax(
+{
+    type: "POST",
+    url: "http://2bvision.com/kids2promobile/AdvertisementManagerService.asmx/GetLeaderBoard",
+    data: "{}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+    success: function (response, status) {
+
+        $.Storage.get("UserName");
+        var asd = $("#divLeaderBoard");
+        $("#divLeaderBoard").html(response.d);
+
+
+    },
+    failure: function (msg) {
+        alert(msg);
+    }
+}
+	);
+        }
     </script>
     <!-- toggle menu ends -->
 </head>
@@ -65,6 +114,8 @@
         <!-- header ends -->
         <!-- container starts-->
         <!-- inner menu starts-->
+         <div id="divLeaderBoard">
+        </div>
         <div class="innermenu">
             <!--<ul class="clearfix">
                 <li><a href="MyAccount.html" title="My Account" target="_self">My Account</a> </li>
@@ -77,6 +128,8 @@
             <!-- left area starts-->
           
         </div>
+        <div id="divRightAdds" class="contentRight fRight">
+            </div>
         <!-- container ends-->
 </body>
 </html>

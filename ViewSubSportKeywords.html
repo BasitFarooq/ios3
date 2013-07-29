@@ -361,6 +361,56 @@
                 }
             });
         }
+        function GetRightAdver() {
+
+            $.ajax(
+{
+    type: "POST",
+    url: "http://2bvision.com/Kids2proSports/AdvertisementManagerService.asmx/GetRightAdvertisingColumn",
+    data: "{}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+    success: function (response, status) {
+        //alert('1');
+        $.Storage.get("UserName");
+        var asd = $("#divRightAdds");
+        $("#divRightAdds").html(response.d);
+
+
+    },
+    failure: function (msg) {
+        alert(msg);
+    }
+}
+	);
+        }
+
+        function GetLeaderBoard() {
+
+            $.ajax(
+{
+    type: "POST",
+    url: "http://2bvision.com/Kids2proSports/AdvertisementManagerService.asmx/GetLeaderBoard",
+    data: "{}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+    success: function (response, status) {
+        //alert('1');
+        $.Storage.get("UserName");
+        var asd = $("#divLeaderBoard");
+        //alert(asd);
+
+        $("#divLeaderBoard").html(response.d);
+
+
+    },
+    failure: function (msg) {
+        alert(msg);
+    }
+});
+        }
     </script>
     <!--"HandleSportCountIncrementing(),IsUserAFollower(),GetNumberOfSportImpressions(),GetSportHierarchy(),GetSportDefinition(),GetRecentArticelsSection(),EncodeSubNav()"-->
 </head>
@@ -392,10 +442,14 @@
             </div>
         </header>
         <!-- header ends -->
+         <div id="divLeaderBoard">
+        </div>
         <!-- container starts-->
         <div class="contetns clearfix">
             <!-- left area starts-->
             <div class="contentLeft fLeft">
+                <div id="divRightAdds" class="contentRight fRight">
+            </div>
                 <div class="innerwrapper">
                     <!-- contentLeft -->
                     <h2>
